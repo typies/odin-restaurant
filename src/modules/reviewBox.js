@@ -9,7 +9,6 @@ class ReviewCard {
         reviewCard.classList.add("review-card");
         this.domElement = reviewCard;
     }
-    domElement;
 
     createReviewCardElement() {
         const reviewCardText = document.createElement("div");
@@ -55,9 +54,6 @@ const fakeReviewList = [
     },
 ];
 
-const content2 = document.createElement("div");
-content2.classList.add("content-2");
-
 const reviewBox = document.createElement("div");
 reviewBox.classList.add("review-box");
 
@@ -66,6 +62,4 @@ fakeReviewList.forEach((review) => {
     reviewBox.appendChild(newReviewCard.createReviewCardElement());
 });
 
-content2.appendChild(reviewBox);
-
-export default content2;
+export default reviewBox;

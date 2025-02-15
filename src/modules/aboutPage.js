@@ -1,5 +1,3 @@
-import "../styles.css";
-
 class AboutPage {
     domElements = {
         contentDiv: document.querySelector("#content"),

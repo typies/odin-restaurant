@@ -1,3 +1,4 @@
+import "./styles/styles.css";
 import homePage from "./modules/homePage.js";
 import menuPage from "./modules/menuPage.js";
 import aboutPage from "./modules/aboutPage.js";

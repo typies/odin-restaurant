@@ -9,7 +9,6 @@ class CallToAction {
         ctaDiv.classList.add("cta");
         this.domElement = ctaDiv;
     }
-    domElement;
 
     createCallToActionElement() {
         const ctaText = document.createElement("div");
@@ -26,12 +25,12 @@ class CallToAction {
     }
 }
 
-const content1 = document.createElement("div");
-content1.classList.add("content-1");
+const ctaWrapper = document.createElement("div");
+ctaWrapper.classList.add("cta-wrapper");
 
-content1.appendChild(
+ctaWrapper.appendChild(
     new CallToAction(
-        "Best Nachos on the web!",
+        "Best Mexican food on the web!",
         "Book your reservation here"
     ).createCallToActionElement("div")
 );
@@ -40,6 +39,6 @@ const nachosImgEle = document.createElement("img");
 nachosImgEle.classList.add("food-img");
 nachosImgEle.src = nachosImg;
 
-content1.appendChild(nachosImgEle);
+ctaWrapper.appendChild(nachosImgEle);
 
-export default content1;
+export default ctaWrapper;

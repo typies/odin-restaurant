@@ -1,7 +1,5 @@
-import "../styles.css";
-
-import content1 from "./content1.js";
-import content2 from "./content2.js";
+import homePageCta from "./cta.js";
+import homePageReviews from "./reviewBox.js";
 
 class HomePage {
     domElements = {
@@ -9,7 +7,10 @@ class HomePage {
     };
 
     render() {
-        this.domElements.contentDiv.replaceChildren(content1, content2);
+        this.domElements.contentDiv.replaceChildren(
+            homePageCta,
+            homePageReviews
+        );
     }
 }
 

@@ -61,7 +61,7 @@ header nav button {
 
 /* Content 1 - Call to action */
 
-.content-1 {
+.cta-wrapper {
     display: flex;
 }
 
@@ -89,10 +89,7 @@ header nav button {
     border-radius: 20px;
 }
 
-/* Content 2 - Reviews */
-
-.content-2 {
-}
+/* Content - Reviews */
 
 .review-box {
     display: flex;

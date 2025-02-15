@@ -1,0 +1,50 @@
+:root {
+    --bg-clr: #28282b; /* Matte Black */
+    --footer-clr: hsl(240, 4%, 10%); /* Matte Black */
+    --text-clr: #fffff0; /* Ivory */
+    --clr-1: #4997d0; /* Celestial Blue */
+    --clr-2: #e1bc28; /* Saffron */
+    font-family: "Montserrat", serif;
+}
+
+.menu-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-section-header {
+    font-size: 48px;
+    border-bottom: 1px solid var(--text-clr);
+}
+
+.menu-item-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.menu-item-card {
+    border: 2px solid var(--clr-2);
+    border-radius: 10px;
+    padding: 30px;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 200px;
+    font-style: italic;
+    display: grid;
+    place-items: center;
+}
+
+.menu-item-name {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.menu-item-price {
+    color: var(--clr-1);
+}
