@@ -46,7 +46,8 @@ header {
 
 header nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
     height: 100px;
     padding-bottom: 10px;

@@ -3,15 +3,14 @@ import "../styles.css";
 import content1 from "./content1.js";
 import content2 from "./content2.js";
 
-class RestaurantPage {
+class HomePage {
     domElements = {
         contentDiv: document.querySelector("#content"),
     };
 
-    init() {
-        this.domElements.contentDiv.appendChild(content1);
-        this.domElements.contentDiv.appendChild(content2);
+    render() {
+        this.domElements.contentDiv.replaceChildren(content1, content2);
     }
 }
 
-export default new RestaurantPage();
+export default new HomePage();
