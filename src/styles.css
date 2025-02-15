@@ -23,7 +23,9 @@ body > * {
 #content > * {
     margin-bottom: 80px;
     padding-top: 80px;
-    border-top: 1px solid var(--text-clr);
+    &:not(:first-child) {
+        border-top: 1px solid var(--text-clr);
+    }
 }
 
 button {
@@ -37,7 +39,9 @@ button {
 /* Header */
 
 header {
+    margin: 0;
     margin-bottom: 10px;
+    border-bottom: 1px solid var(--text-clr);
 }
 
 header nav {
@@ -115,7 +119,7 @@ header nav button {
 
 footer {
     /* background-color: var(--footer-clr); */
-    border-top: 1px solid black;
+    border-top: 1px solid var(--text-clr);
     margin: 0;
     text-align: center;
     padding: 10px 0;
