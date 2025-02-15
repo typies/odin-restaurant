@@ -59,60 +59,6 @@ header nav button {
     padding: 20px;
 }
 
-/* Content 1 - Call to action */
-
-.cta-wrapper {
-    display: flex;
-}
-
-.cta {
-    width: 50%;
-    margin: auto 40px;
-}
-
-.cta-text {
-    font-size: 3em;
-}
-
-.cta-btn {
-    font-size: 1.2em;
-    margin-top: 10px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--clr-1);
-}
-
-.food-img {
-    max-width: 30vw;
-    border: 6px solid var(--clr-2);
-    border-radius: 20px;
-}
-
-/* Content - Reviews */
-
-.review-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.review-card {
-    border: 2px solid var(--clr-2);
-    border-radius: 10px;
-    padding: 30px;
-    width: 300px;
-    height: 200px;
-    font-style: italic;
-    display: grid;
-    place-items: center;
-}
-
-.review-stars img {
-    max-width: 25px;
-}
-
 /* Footer */
 
 footer {

@@ -1,9 +1,9 @@
 import "../styles/menuPage.css";
 
-class MenuPage {
-    mainItemList = [];
-    sidesItemList = [];
-    beverageItemList = [];
+class MenuModule {
+    constructor(menuItems) {
+        this.mainItemList = menuItems || [];
+    }
     domElements = {
         contentDiv: document.querySelector("#content"),
     };
@@ -56,17 +56,17 @@ class MenuPage {
             switch (menuItem.type) {
                 case "main":
                     mainMenuItemBox.appendChild(
-                        new MenuItemCard(menuItem).render()
+                        new MenuItemCard(menuItem).createMenuItemElement()
                     );
                     break;
                 case "side":
                     sideMenuItemBox.appendChild(
-                        new MenuItemCard(menuItem).render()
+                        new MenuItemCard(menuItem).createMenuItemElement()
                     );
                     break;
                 case "beverage":
                     beverageMenuItemBox.appendChild(
-                        new MenuItemCard(menuItem).render()
+                        new MenuItemCard(menuItem).createMenuItemElement()
                     );
                     break;
                 default:
@@ -120,10 +120,6 @@ class MenuItemCard {
         this.domElement.appendChild(menuItemPrice);
 
         return this.domElement;
-    }
-
-    render() {
-        return this.createMenuItemElement();
     }
 }
 
@@ -209,7 +205,6 @@ const defaultMenuItemList = [
     ),
 ];
 
-const defaultMenuPage = new MenuPage();
-defaultMenuPage.addMenuItems(defaultMenuItemList);
+const defaultMenuModule = new MenuModule(defaultMenuItemList);
 
-export default defaultMenuPage;
+export default defaultMenuModule;

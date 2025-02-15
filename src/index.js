@@ -1,6 +1,6 @@
-import "./styles/styles.css";
+import "./styles/main.css";
 import homePage from "./modules/homePage.js";
-import menuPage from "./modules/menuPage.js";
+import menuPage from "./modules/menuModule.js";
 import aboutPage from "./modules/aboutPage.js";
 
 const homeButton = document.getElementById("home");

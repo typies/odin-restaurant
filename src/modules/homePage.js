@@ -1,5 +1,6 @@
 import homePageCta from "./cta.js";
-import homePageReviews from "./reviewBox.js";
+import homePageReviews from "./reviewModule.js";
+import "../styles/home.css";
 
 class HomePage {
     domElements = {
@@ -7,10 +8,8 @@ class HomePage {
     };
 
     render() {
-        this.domElements.contentDiv.replaceChildren(
-            homePageCta,
-            homePageReviews
-        );
+        this.domElements.contentDiv.replaceChildren(homePageCta);
+        homePageReviews.render();
     }
 }
 
