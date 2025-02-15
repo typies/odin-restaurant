@@ -1,12 +1,3 @@
-:root {
-    --bg-clr: #28282b; /* Matte Black */
-    --footer-clr: hsl(240, 4%, 10%); /* Matte Black */
-    --text-clr: #fffff0; /* Ivory */
-    --clr-1: #4997d0; /* Celestial Blue */
-    --clr-2: #e1bc28; /* Saffron */
-    font-family: "Montserrat", serif;
-}
-
 .menu-section-wrapper {
     display: flex;
     flex-direction: column;
