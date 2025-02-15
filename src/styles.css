@@ -1,3 +1,125 @@
-body {
-    background-color: green;
+:root {
+    --bg-clr: #28282b; /* Matte Black */
+    --footer-clr: hsl(240, 4%, 10%); /* Matte Black */
+    --text-clr: #fffff0; /* Ivory */
+    --clr-1: #4997d0; /* Celestial Blue */
+    --clr-2: #e1bc28; /* Saffron */
+    font-family: "Montserrat", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-clr, black);
+    background-color: var(--bg-clr, white);
+}
+
+body > * {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+#content > * {
+    margin-bottom: 80px;
+    padding-top: 80px;
+    border-top: 1px solid var(--text-clr);
+}
+
+button {
+    cursor: pointer;
+    &:hover {
+        scale: 1.05;
+        color: var(--clr-2);
+    }
+}
+
+/* Header */
+
+header {
+    margin-bottom: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+header nav button {
+    border: none;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+/* Content 1 - Call to action */
+
+.content-1 {
+    display: flex;
+}
+
+.cta {
+    width: 50%;
+    margin: auto 40px;
+}
+
+.cta-text {
+    font-size: 3em;
+}
+
+.cta-btn {
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--clr-1);
+}
+
+.food-img {
+    max-width: 30vw;
+    border: 6px solid var(--clr-2);
+    border-radius: 20px;
+}
+
+/* Content 2 - Reviews */
+
+.content-2 {
+}
+
+.review-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.review-card {
+    border: 2px solid var(--clr-2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    height: 200px;
+    font-style: italic;
+    display: grid;
+    place-items: center;
+}
+
+.review-stars img {
+    max-width: 25px;
+}
+
+/* Footer */
+
+footer {
+    /* background-color: var(--footer-clr); */
+    border-top: 1px solid black;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+    a {
+        background-color: inherit;
+    }
 }
