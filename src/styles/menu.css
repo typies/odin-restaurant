@@ -4,11 +4,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    &:not(:first-child) {
+        padding-top: 80px;
+    }
 }
 
 .menu-section-header {
-    font-size: 48px;
-    border-bottom: 1px solid var(--text-clr);
+    font-size: 3em;
 }
 
 .menu-item-box {
