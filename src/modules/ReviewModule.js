@@ -5,9 +5,6 @@ class ReviewModule {
     constructor(reviews) {
         this.reviewList = reviews || [];
     }
-    domElements = {
-        contentDiv: document.querySelector("#content"),
-    };
     REVIEW_SECTION_TEXT =
         "Don't trust our word, Look at what these happy customers had to say!";
 
@@ -32,7 +29,7 @@ class ReviewModule {
         return sectionWrapper;
     }
 
-    render() {
+    create() {
         const reviewBox = document.createElement("div");
         reviewBox.classList.add("review-box");
         this.reviewList.forEach((review) => {
@@ -40,9 +37,7 @@ class ReviewModule {
                 new ReviewCard(review).createReviewCardElement()
             );
         });
-        this.domElements.contentDiv.appendChild(
-            this.createReviewSection(this.REVIEW_SECTION_TEXT, reviewBox)
-        );
+        return this.createReviewSection(this.REVIEW_SECTION_TEXT, reviewBox);
     }
 }
 
@@ -67,8 +62,8 @@ class ReviewCard {
         reviewCardText.classList.add("review-text");
 
         reviewCardText.textContent =
-            this.review.review.length > 125
-                ? `${this.review.review.slice(0, 125)}...`
+            this.review.review.length > 131
+                ? `${this.review.review.slice(0, 131)}...`
                 : this.review.review;
         this.domElement.appendChild(reviewCardText);
 
@@ -95,20 +90,4 @@ class ReviewCard {
     }
 }
 
-const fakeReviewList = [
-    new Review(
-        "Mr Bob",
-        "This is my all time favorite restaurant! The staff is so friendly and the owner is my husband!",
-        4.5
-    ),
-    new Review("Anon", "Good food", 5),
-    new Review(
-        "Curious George",
-        "I didn't get diarrhea at this restaurant! And that's a problem that I usually have when I eat at mexican restaurants. You see, ever since I was a little boy I would always love to eat the biggest burritos I could find. I'm talkinb monsterous, giagantic, elephant-sized, burritos, and as you can imagine. More text that gets cut off",
-        5
-    ),
-];
-
-const defaultReviewModule = new ReviewModule(fakeReviewList);
-
-export default defaultReviewModule;
+export { ReviewModule, Review };

@@ -1,16 +1,10 @@
-import "../styles/contact.css";
-
 class ContactModule {
-    domElements = {
-        contentDiv: document.querySelector("#content"),
-    };
-
-    render() {
+    create() {
         const formWrapper = document.createElement("div");
         formWrapper.classList.add("form-wrapper");
 
-        formWrapper.appendChild(new ContactForm().render());
-        this.domElements.contentDiv.replaceChildren(formWrapper);
+        formWrapper.appendChild(new ContactForm().create());
+        return formWrapper;
     }
 }
 
@@ -60,7 +54,7 @@ class ContactForm {
         return newLi;
     }
 
-    render() {
+    create() {
         // Render new form on page
         const newForm = document.createElement("form");
         newForm.classList.add("contact-form");
@@ -111,4 +105,4 @@ class ContactForm {
     }
 }
 
-export default new ContactModule();
+export default ContactModule;

@@ -1,7 +1,7 @@
 import "./styles/main.css";
-import homePage from "./modules/homePage.js";
-import menuPage from "./modules/menuModule.js";
-import contactPage from "./modules/contactModule.js";
+import homePage from "./modules/HomePage.js";
+import menuPage from "./modules/MenuPage.js";
+import contactPage from "./modules/ContactPage.js";
 
 const homeButton = document.getElementById("home");
 homeButton.addEventListener("click", () => homePage.render());
@@ -11,4 +11,5 @@ menuButton.addEventListener("click", () => menuPage.render());
 
 const contactButton = document.getElementById("contact");
 contactButton.addEventListener("click", () => contactPage.render());
+
 homePage.render();
